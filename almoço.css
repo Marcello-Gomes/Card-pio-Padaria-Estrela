@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo de fallback */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./prato.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Ajuste a opacidade aqui */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    color: yellow ;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dish {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.dish h3 {
+    margin: 0;
+}
+
+.dish p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: yellow;
+}
+
+.dish span {
+    color: white;
+    font-weight: bold;
+}
+
+footer  {
+    background-color: black;
+    color: darkkhaki;
+    padding: 20px 0;
+    text-align: center;
+}
+
+a {
+    color: darkkhaki;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.footer-logocopy {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+    }    
+
+@media (max-width: 600px) {
+    .dish {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dish span {
+        margin-top: 5px;
+    }
+}
